@@ -1,0 +1,65 @@
+🎯 Cel MVP
+Umożliwić użytkownikowi podstawowe monitorowanie przychodów, kosztów i limitów działalności (szczególnie nierejestrowanej).
+
+✅ Główne funkcje MVP
+Panel główny (dashboard)
+
+Podsumowanie:
+
+Suma przychodów
+
+Suma kosztów
+
+Zysk netto
+
+Procent wykorzystania limitu (np. 100% z 3181 zł/mc w 2025)
+
+Prosty wykres lub lista miesięczna
+
+Dodawanie transakcji
+
+Formularz:
+
+Typ: Przychód / Wydatek
+
+Data
+
+Kwota
+
+Opis (opcjonalnie)
+
+Lista transakcji z możliwością usuwania/edycji
+
+Monitorowanie limitu działalności nierejestrowanej
+
+Automatyczne liczenie sumy przychodów
+
+Alert, gdy zbliżasz się do limitu (np. 90%, 100%)
+
+Eksport danych
+
+Pobierz dane jako PDF/CSV (prosty raport miesięczny)
+
+🔐 Użytkownik
+Bez logowania w MVP – dane zapisane lokalnie (np. localStorage)
+
+(Opcjonalnie: dodanie konta/logowania w kolejnej wersji)
+
+💻 Technologie (propozycja)
+Frontend: Next.js lub React.js
+
+UI: Tailwind CSS
+
+Baza danych: na start lokalna (np. localStorage lub IndexedDB)
+
+(W kolejnych wersjach można dodać Firebase / Supabase)
+
+🕒 Plan działania (etapy MVP)
+Etap	Zadanie
+1	Stworzenie projektu i layoutu
+2	Dodanie formularza transakcji
+3	Stworzenie dashboardu z podsumowaniem
+4	Liczenie przychodów i limitu
+5	Eksport do CSV/PDF
+6	Testy i poprawki
+
