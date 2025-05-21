@@ -1,2 +1,6 @@
+Wednesday, 21 may 2025 15:30:37
+Created basic layout for app
+
+
 Wednesday, 21 may 2025 07:53:37
 Init
