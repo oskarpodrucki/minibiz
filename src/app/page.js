@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 export default function Home() {
 	return (
 		<Card className='flex flex-col justify-center items-center w-[97%] h-[100%]'>
-			<h1>This is home page</h1>
+			<h1>This is start page</h1>
 		</Card>
 	);
 }

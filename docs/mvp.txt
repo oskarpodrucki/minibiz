@@ -2,64 +2,61 @@
 Umożliwić użytkownikowi podstawowe monitorowanie przychodów, kosztów i limitów działalności (szczególnie nierejestrowanej).
 
 ✅ Główne funkcje MVP
-Panel główny (dashboard)
 
-Podsumowanie:
+1. Panel główny (dashboard)
+   - Podsumowanie:
+     • Suma przychodów  
+     • Suma kosztów  
+     • Zysk netto  
+     • Procent wykorzystania limitu (np. 100% z 3181 zł/mc w 2025)  
+     • Prosty wykres lub lista miesięczna  
 
-Suma przychodów
+2. Dodawanie transakcji
+   - Formularz:
+     • Typ: Przychód / Wydatek  
+     • Data  
+     • Kwota  
+     • Opis (opcjonalnie)  
 
-Suma kosztów
+   - Lista transakcji z możliwością usuwania/edycji  
 
-Zysk netto
+3. Monitorowanie limitu działalności nierejestrowanej
+   - Automatyczne liczenie sumy przychodów  
+   - Alert, gdy zbliżasz się do limitu (np. 90%, 100%)  
 
-Procent wykorzystania limitu (np. 100% z 3181 zł/mc w 2025)
-
-Prosty wykres lub lista miesięczna
-
-Dodawanie transakcji
-
-Formularz:
-
-Typ: Przychód / Wydatek
-
-Data
-
-Kwota
-
-Opis (opcjonalnie)
-
-Lista transakcji z możliwością usuwania/edycji
-
-Monitorowanie limitu działalności nierejestrowanej
-
-Automatyczne liczenie sumy przychodów
-
-Alert, gdy zbliżasz się do limitu (np. 90%, 100%)
-
-Eksport danych
-
-Pobierz dane jako PDF/CSV (prosty raport miesięczny)
+4. Eksport danych
+   - Pobierz dane jako PDF/CSV (prosty raport miesięczny)  
 
 🔐 Użytkownik
-Bez logowania w MVP – dane zapisane lokalnie (np. localStorage)
-
-(Opcjonalnie: dodanie konta/logowania w kolejnej wersji)
+- Bez logowania w MVP – dane zapisane lokalnie (np. localStorage)  
+- (Opcjonalnie: dodanie konta/logowania w kolejnej wersji)  
 
 💻 Technologie (propozycja)
-Frontend: Next.js lub React.js
-
-UI: Tailwind CSS
-
-Baza danych: na start lokalna (np. localStorage lub IndexedDB)
-
-(W kolejnych wersjach można dodać Firebase / Supabase)
+- Frontend: Next.js 
+- UI: Tailwind CSS  
+- Baza danych: na start lokalna (np. localStorage lub IndexedDB)  
+- (W kolejnych wersjach można dodać Firebase / Supabase)  
 
 🕒 Plan działania (etapy MVP)
-Etap	Zadanie
-1	Stworzenie projektu i layoutu
-2	Dodanie formularza transakcji
-3	Stworzenie dashboardu z podsumowaniem
-4	Liczenie przychodów i limitu
-5	Eksport do CSV/PDF
-6	Testy i poprawki
 
+Etap  | Zadanie
+--------------------------
+1     | Stworzenie projektu i layoutu  
+2     | Dodanie formularza transakcji  
+3     | Stworzenie dashboardu z podsumowaniem  
+4     | Liczenie przychodów i limitu  
+5     | Eksport do CSV/PDF  
+6     | Testy i poprawki  
+
+2. 🧩 Struktura formularza
+Formularz powinien zawierać:
+
+Typ transakcji – wybór: Przychód lub Wydatek (np. radio button lub dropdown).
+
+Data – pole daty (<input type="date">).
+
+Kwota – pole liczby (<input type="number">, z walidacją że > 0).
+
+Opis (opcjonalny) – pole tekstowe (<input type="text"> lub <textarea>).
+
+Przycisk "Dodaj transakcję" – wysyła dane i zapisuje je w localStorage.

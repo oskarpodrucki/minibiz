@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Star, LayoutDashboard, Coins } from "lucide-react";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,24 +35,45 @@ export default function RootLayout({ children }) {
 								</Card>
 								<Separator className='my-2' />
 
-								<Card className='flex flex-row justify-center h-[5%] w-[90%] items-center p-5'>
-									<Link href='/'>home</Link>
-								</Card>
+								<Link href='/' className='w-[90%]'>
+									<Card className='relative flex flex-row items-center justify-between h-[50px] px-4'>
+										<Star />
+										<p className='absolute left-1/2 transform -translate-x-1/2'>
+											Start
+										</p>
+									</Card>
+								</Link>
 
-								<Card className='flex flex-row justify-center h-[5%] w-[90%] items-center p-5'>
-									<Link href='/dashboard'>dashboard</Link>
-								</Card>
+								<Link href='/pulpit' className='w-[90%]'>
+									<Card className='relative flex flex-row items-center justify-between h-[50px] px-4'>
+										<LayoutDashboard />
+										<p className='absolute left-1/2 transform -translate-x-1/2'>
+											Pulpit
+										</p>
+									</Card>
+								</Link>
+
+								<Link href='/ksiegowosc' className='w-[90%]'>
+									<Card className='relative flex flex-row items-center justify-between h-[50px] px-4'>
+										<Coins />
+										<p className='absolute left-1/2 transform -translate-x-1/2'>
+											Księgowość
+										</p>
+									</Card>
+								</Link>
 							</div>
 
 							{/* Dół: separator + avatar */}
 							<div className='flex flex-col items-center w-full gap-2 '>
 								<Separator className='my-2' />
-								<Card className='flex flex-row w-[90%] items-center p-5 gap-3'>
+								<Card className='flex flex-row w-[90%] justify-between items-center p-5 gap-3'>
 									<Avatar>
-										<AvatarImage alt='@user' />
-										<AvatarFallback>USR</AvatarFallback>
+										<AvatarImage alt='@test' />
+										<AvatarFallback>TS</AvatarFallback>
 									</Avatar>
-									<h1 className='ml-3 text-2xl text-green-700'>Username</h1>
+									<h1 className='text-nowrap text-center text-xl text-green-700'>
+										Test Testowy
+									</h1>
 								</Card>
 							</div>
 						</Card>
