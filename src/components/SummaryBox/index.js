@@ -8,22 +8,18 @@ export default function SummaryBox() {
 			<div className='flex flex-row'>
 				<FileCheck />
 				<h1 className='text-lg font-semibold ml-1'>
-					Podsumowanie działalności
+					Miesięczne podsumowanie działalności
 				</h1>
 			</div>
-
 			<Separator />
-
 			<div className='flex flex-col gap-2'>
 				<div className='flex flex-row justify-between items-center w-full'>
 					<p className='font-medium'>Limit miesięczny</p>
-					<p className='font-medium'>Suma sprzedaży</p>
+					<p className='font-medium'>Suma przychodów</p>
 					<p className='font-medium'>Pozostało do limitu</p>
 				</div>
-
 				<Separator />
-
-				<div className='flex flex-row justify-between w-full text-green-700'>
+				<div className='flex flex-row justify-between w-full text-green-500'>
 					<p>3 499,50 PLN</p>
 					<p>0,00 PLN</p>
 					<p>3 499,50 PLN</p>

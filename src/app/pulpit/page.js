@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import FastActivity from "@/components/FastActivity";
 import SummaryBox from "@/components/SummaryBox";
 import TransactionsRatio from "@/components/TransactionsRatio";

@@ -58,9 +58,9 @@ export default function TransactionForm() {
 				<CardHeader className='flex flex-row items-center gap-5'>
 					<HandCoins size={32} className='text-primary' />
 					<div>
-						<CardTitle>Dodaj transakcję</CardTitle>
+						<CardTitle>Zapisz transakcję</CardTitle>
 						<CardDescription>
-							Zarejestruj nowy przychód lub wydatek.
+							Dodaj nową transakcję do swojej działalności
 						</CardDescription>
 					</div>
 				</CardHeader>
@@ -78,10 +78,10 @@ export default function TransactionForm() {
 										id='income'
 										className='cursor-pointer'
 									/>
-									<BanknoteArrowUp color='green' />
+									<BanknoteArrowUp color='#00bb33' />
 									<Label
 										htmlFor='income'
-										className='text-sm text-green-700 font-normal cursor-pointer'>
+										className='text-sm text-green-500 font-normal cursor-pointer'>
 										Przychód
 									</Label>
 								</div>
@@ -91,16 +91,16 @@ export default function TransactionForm() {
 										id='expense'
 										className='cursor-pointer'
 									/>
-									<BanknoteArrowDown color='red' />
+									<BanknoteArrowDown color='#aa1e21' />
 									<Label
 										htmlFor='expense'
-										className='text-sm text-red-700 font-normal cursor-pointer'>
+										className='text-sm text-red-500 font-normal cursor-pointer'>
 										Wydatek
 									</Label>
 								</div>
 							</RadioGroup>
 						</div>
-
+						//TODO: podmień to na date z shadcn
 						<div className='space-y-2'>
 							<Label htmlFor='date'>Data</Label>
 							<Input
@@ -111,7 +111,6 @@ export default function TransactionForm() {
 								required
 							/>
 						</div>
-
 						<div className='space-y-2'>
 							<Label htmlFor='amount'>Kwota (Wartość w PLN)</Label>
 							<Input
@@ -134,7 +133,6 @@ export default function TransactionForm() {
 								<p className='text-sm text-red-500'>{errors.amount}</p>
 							)}
 						</div>
-
 						<div className='space-y-2'>
 							<Label htmlFor='description'>Opis (opcjonalnie)</Label>
 							<Textarea
@@ -145,7 +143,6 @@ export default function TransactionForm() {
 								className='min-h-[80px]'
 							/>
 						</div>
-
 						<Button type='submit' className='w-full cursor-pointer'>
 							Dodaj transakcję
 						</Button>

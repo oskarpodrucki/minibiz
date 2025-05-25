@@ -1,10 +1,9 @@
 import { Card } from "@/components/ui/card";
-import TransactionForm from "@/components/TransactionForm";
 
-export default function Ksiegowosc() {
+export default function Raporty() {
 	return (
 		<Card className='flex flex-col justify-center items-center w-[97%] h-[100%]'>
-			<TransactionForm />
+			<h1>This is raporty page</h1>
 		</Card>
 	);
 }

@@ -5,41 +5,54 @@ import {
 	HoverCardContent,
 	HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { Eye } from "lucide-react";
 import clsx from "clsx";
 
 export default function ActivityItem({ type, date, amount, description }) {
-	const color =
-		type === "income"
-			? "text-green-700"
-			: type === "expense"
-			? "text-red-700"
-			: "text-neutral-700";
+	const isIncome = type === "income";
+	const isExpense = type === "expense";
+
+	const borderColor = clsx({
+		"border-l-4 border-green-500": isIncome,
+		"border-l-4 border-red-500": isExpense,
+		"border-l-4 border-gray-400": !isIncome && !isExpense,
+	});
+
+	const textColor = clsx({
+		"text-green-600": isIncome,
+		"text-red-600": isExpense,
+		"text-neutral-500": !isIncome && !isExpense,
+	});
 
 	return (
-		<Card className='flex flex-col gap-1 mt-1'>
-			<div className='flex flex-row justify-between items-center w-full'>
-				<p className='font-medium ml-2'>Rodzaj</p>
-				<p className='font-medium'>Data</p>
-				<p className='font-medium'>Kwota</p>
-				<p className='font-medium mr-2'>Opis</p>
+		<Card className={clsx("flex flex-col gap-1 mt-2 p-3", borderColor)}>
+			<div className='flex flex-row justify-between items-center text-sm font-semibold text-muted-foreground mb-1'>
+				<p>Typ</p>
+				<p>Data</p>
+				<p>Kwota</p>
+				<p>Opis</p>
 			</div>
 			<Separator />
-			<div className={clsx("flex flex-row justify-between w-full", color)}>
-				<p className='ml-2'>{type === "income" ? "Przychód" : "Wydatek"}</p>
+			<div className='flex flex-row justify-between items-center mt-2 text-sm'>
+				<div className='flex items-center'>
+					<p className={textColor}>{isIncome ? "Przychód" : "Wydatek"}</p>
+				</div>
 				<p>{date}</p>
-				<p>{amount}</p>
-				{!description ? (
-					<p className='mr-2'>Brak</p>
-				) : (
-					<HoverCard>
-						<HoverCardTrigger asChild>
-							<p className='underline mr-2 cursor-pointer'>Zobacz</p>
-						</HoverCardTrigger>
-						<HoverCardContent className='w-80'>
-							<p>{description}</p>
-						</HoverCardContent>
-					</HoverCard>
-				)}
+				<p className='font-medium'>{amount}</p>
+				<div>
+					{!description ? (
+						<p className='text-muted-foreground'>Brak</p>
+					) : (
+						<HoverCard>
+							<HoverCardTrigger asChild>
+								<Eye className='cursor-pointer mr-1 hover:text-gray-400' />
+							</HoverCardTrigger>
+							<HoverCardContent className='w-80 text-sm'>
+								<p>{description}</p>
+							</HoverCardContent>
+						</HoverCard>
+					)}
+				</div>
 			</div>
 		</Card>
 	);
