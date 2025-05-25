@@ -100,7 +100,7 @@ export default function TransactionForm() {
 								</div>
 							</RadioGroup>
 						</div>
-						//TODO: podmień to na date z shadcn
+						{/* TODO: Podmień to na https://ui.shadcn.com/docs/components/date-picker */}
 						<div className='space-y-2'>
 							<Label htmlFor='date'>Data</Label>
 							<Input
