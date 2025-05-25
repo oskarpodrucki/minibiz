@@ -4,8 +4,8 @@ import { FileCheck } from "lucide-react";
 
 export default function SummaryBox() {
 	return (
-		<Card className='flex flex-col w-[95%] p-4'>
-			<div className="flex flex-row mt-3">
+		<Card className='flex flex-col w-[95%] h-[30%] p-4'>
+			<div className='flex flex-row'>
 				<FileCheck />
 				<h1 className='text-lg font-semibold ml-1'>
 					Podsumowanie działalności

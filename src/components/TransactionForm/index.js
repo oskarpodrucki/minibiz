@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
+import { HandCoins, BanknoteArrowUp, BanknoteArrowDown } from "lucide-react";
 
 export default function TransactionForm() {
 	const [transactionType, setTransactionType] = useState("income");
@@ -48,16 +49,20 @@ export default function TransactionForm() {
 		setDate("");
 		setAmount("");
 		setDescription("");
+		alert("Dodano transakcję");
 	};
 
 	return (
 		<div className='flex items-center justify-center w-[444px] p-4'>
 			<Card className='w-full max-w-md'>
-				<CardHeader>
-					<CardTitle>Dodaj transakcję</CardTitle>
-					<CardDescription>
-						Zarejestruj nowy przychód lub wydatek.
-					</CardDescription>
+				<CardHeader className='flex flex-row items-center gap-5'>
+					<HandCoins size={32} className='text-primary' />
+					<div>
+						<CardTitle>Dodaj transakcję</CardTitle>
+						<CardDescription>
+							Zarejestruj nowy przychód lub wydatek.
+						</CardDescription>
+					</div>
 				</CardHeader>
 				<CardContent>
 					<form onSubmit={handleSubmit} className='space-y-6'>
@@ -68,18 +73,28 @@ export default function TransactionForm() {
 								onValueChange={setTransactionType}
 								className='flex gap-6'>
 								<div className='flex items-center space-x-2'>
-									<RadioGroupItem value='income' id='income' />
+									<RadioGroupItem
+										value='income'
+										id='income'
+										className='cursor-pointer'
+									/>
+									<BanknoteArrowUp color='green' />
 									<Label
 										htmlFor='income'
-										className='text-sm font-normal cursor-pointer'>
+										className='text-sm text-green-700 font-normal cursor-pointer'>
 										Przychód
 									</Label>
 								</div>
 								<div className='flex items-center space-x-2'>
-									<RadioGroupItem value='expense' id='expense' />
+									<RadioGroupItem
+										value='expense'
+										id='expense'
+										className='cursor-pointer'
+									/>
+									<BanknoteArrowDown color='red' />
 									<Label
 										htmlFor='expense'
-										className='text-sm font-normal cursor-pointer'>
+										className='text-sm text-red-700 font-normal cursor-pointer'>
 										Wydatek
 									</Label>
 								</div>
