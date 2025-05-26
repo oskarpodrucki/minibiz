@@ -48,6 +48,8 @@ export default function ActivityItem({ type, date, amount, description }) {
 								<Eye className='cursor-pointer mr-1 hover:text-gray-400' />
 							</HoverCardTrigger>
 							<HoverCardContent className='w-80 text-sm'>
+								<h1 className='font-bold'>Opis transakcji:</h1>
+								<Separator className='my-1' />
 								<p>{description}</p>
 							</HoverCardContent>
 						</HoverCard>

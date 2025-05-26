@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/ThemeProvider/theme-provider";
 import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import NotificationBox from "@/components/NotificationsBox";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star, LayoutDashboard, FileText, Coins } from "lucide-react";
 import Link from "next/link";
@@ -74,6 +75,7 @@ export default function RootLayout({ children }) {
 
 							{/* Dół: separator + avatar + w przyszłości powiadomienia*/}
 							<div className='flex flex-col items-center w-full gap-2 '>
+								<NotificationBox />
 								<Separator className='my-2' />
 								<Card className='flex flex-row w-[90%] justify-between items-center p-5 gap-3'>
 									<Avatar>
