@@ -13,11 +13,11 @@ import {
 	BanknoteArrowDown,
 } from "lucide-react";
 
-export default function ActivitiBox() {
+export default function RaportActivityBox() {
 	const [transactionType, setTransactionType] = useState("time");
 
 	return (
-		<Card className='flex flex-col w-[40%] h-[100%] p-4'>
+		<Card className='flex flex-col w-[30%] h-[100%] p-4'>
 			<div className='flex flex-row'>
 				<ChartNoAxesGantt />
 				<h1 className='text-lg font-semibold ml-1'>Ostatnie transakcje</h1>
@@ -68,7 +68,7 @@ export default function ActivitiBox() {
 			</div>
 			<Separator />
 
-			<ScrollArea className='flex flex-col p-2 w-full h-[400px]'>
+			<ScrollArea className='flex flex-col p-2 w-full h-[600px]'>
 				<ActivityItem
 					type='income'
 					date='01.01.2025'
@@ -98,6 +98,48 @@ export default function ActivitiBox() {
 					date='01.01.2025'
 					amount='100.00 PLN'
 					description='Sprzedzaż zestawu 1'
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
+				/>
+				<ActivityItem
+					type='expense'
+					date='02.01.2025'
+					amount='50.00 PLN'
+					description=''
 				/>
 				<ActivityItem
 					type='expense'
